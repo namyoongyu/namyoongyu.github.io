@@ -1,12 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나의 왭패이지 시작 </title>  
+  <title>메뉴 예시</title>
+  <style>
+    /* CSS 스타일링 */
+    .menu {
+      display: inline-block;
+      padding: 10px;
+      background-color: #f1f1f1;
+      cursor: pointer;
+    }
+
+    .content {
+      display: none;
+      padding: 10px;
+      background-color: #ffffff;
+    }
+  </style>
 </head>
 <body>
-    시작
+  <div class="menu" onclick="toggleContent(1)">메뉴 1</div>
+  <div class="menu" onclick="toggleContent(2)">메뉴 2</div>
+  <div class="menu" onclick="toggleContent(3)">메뉴 3</div>
+  <div class="menu" onclick="toggleContent(4)">메뉴 4</div>
+
+  <div id="content1" class="content">메뉴 1의 내용입니다.</div>
+  <div id="content2" class="content">메뉴 2의 내용입니다.</div>
+  <div id="content3" class="content">메뉴 3의 내용입니다.</div>
+  <div id="content4" class="content">메뉴 4의 내용입니다.</div>
+
+  <script>
+    // JavaScript로 컨텐츠를 토글하는 함수
+    function toggleContent(num) {
+      // 모든 컨텐츠 숨김
+      var contents = document.getElementsByClassName("content");
+      for (var i = 0; i < contents.length; i++) {
+        contents[i].style.display = "none";
+      }
+
+      // 선택한 메뉴의 컨텐츠 표시
+      var content = document.getElementById("content" + num);
+      content.style.display = "block";
+    }
+  </script>
 </body>
 </html>
