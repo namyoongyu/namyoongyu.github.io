@@ -1,47 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-  <title>메뉴 -----</title>
-  <style>
-    /* CSS 스타일링 */
-    .menu {
-      display: inline-block;
-      padding: 10px;
-      background-color: #f1f1f1;
-      cursor: pointer;
-    }
-
-    .content {
-      display: none;
-      padding: 10px;
-      background-color: #ffffff;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제목</title>
 </head>
+<style>
+.숫자패드table{
+border: 1px solid; background-color: pink;
+display: block; font-size: 25px;
+m}
+.시간표 table{
+border:1px solid;  background-color:yellow;
+}
+
+</style>
 <body>
-  <div class="menu" onclick="toggleContent(1)">메뉴 1</div>
-  <div class="menu" onclick="toggleContent(2)">메뉴 2</div>
-  <div class="menu" onclick="toggleContent(3)">메뉴 3</div>
-  <div class="menu" onclick="toggleContent(4)">메뉴 4</div>
-
-  <div id="content1" class="content">메뉴 1의 내용입니다.</div>
-  <div id="content2" class="content">메뉴 2의 내용입니다.</div>
-  <div id="content3" class="content">메뉴 3의 내용입니다.</div>
-  <div id="content4" class="content">메뉴 4의 내용입니다.</div>
-
-  <script>
-    // JavaScript로 컨텐츠를 토글하는 함수
-    function toggleContent(num) {
-      // 모든 컨텐츠 숨김
-      var contents = document.getElementsByClassName("content");
-      for (var i = 0; i < contents.length; i++) {
-        contents[i].style.display = "none";
-      }
-
-      // 선택한 메뉴의 컨텐츠 표시
-      var content = document.getElementById("content" + num);
-      content.style.display = "block";
-    }
-  </script>
+<h1> 숫자패드 table</h1>
+<div class="숫자패드table">
+    <table>
+        <caption>숫자패드table</caption>
+    <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <tr>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+        </tr>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <tr>
+    <th>*</th>
+    <th>0</th>
+    <th>#</th>
+     </tr>
+    </table>
+</div>
+<div class="시간표 table">
+<table>
+    <thead>
+    <tr>
+    <th scope>월</th>
+    <th>화</th>
+    <th>수</th>
+    <th>목</th>
+    <th>금</th>
+    </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1교시</td>
+  </tr>  
+    <td> 2교시</td>
+    <tr>
+        <td>3교시</td>
+    </tr>
+    <tr>
+        <td>4교시</td>
+    </tr>
+    <tr>
+        <td>5교시</td>
+    </tr>
+    <tr>
+        <td>6교시</td>
+    </tr>
+</tbody>
+</table>
+</div>
 </body>
 </html>
